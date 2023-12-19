@@ -314,6 +314,11 @@ void menu_motion() {
   BACK_ITEM(MSG_MAIN);
 
   //
+  // Reset Pos
+  //
+  GCODES_ITEM(MSG_RESET, "G21\nG0 Z150\nG0 X110 Y220");
+
+  //
   // Move Axis
   //
   if (TERN1(DELTA, all_axes_homed()))
